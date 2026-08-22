@@ -2,9 +2,9 @@
 
 It's all about three ideas:
 
-**Markdown as data** — plain text with YAML blocks as a queryable source of truth.
-**Durable file identity** — metadata that survives renaming, moving, and transfer; recorded in plain text, not in the path.
-**Actionable URLs** — a URL is not a link but an instruction: something receives it and acts.
+- **Markdown as data** — plain text with YAML blocks as a queryable source of truth.
+- **Durable file identity** — metadata that survives renaming, moving, and transfer; recorded in plain text, not in the path.
+- **Actionable URLs** — a URL is not a link but an instruction: something receives it and acts.
 
 The tools are small and composable: portable engines and CLIs (Go, Ruby), with the macOS-specific work isolated in one place. Everything is plain text first, built to outlive the apps that read it.
 
@@ -31,17 +31,4 @@ A file gets a permanent id, stamped into an xattr that survives rename, move, iC
 **[dy.lan](https://github.com/rhsev/dy.lan)** is a URL router for the local network with plugin-based automation; it runs as a container. **[mi.lan](https://github.com/rhsev/mi.lan)** is the macOS side: a URL arrives, a script or Shortcut runs. Together they are a lightweight local RPC layer. `milan://<aka>` resolves a file by its durable id and opens it, on whatever machine holds it.
 
 **[ticker](https://github.com/rhsev/ticker)** is an LED dot-matrix ticker in the menu bar, driven from the command line or by URL — it registers handlers for `milan://` and `ref://`.
-
----
-
-| Repo | What it does | Idea | Builds on |
-|---|---|---|---|
-| [grubber](https://github.com/rhsev/grubber) | Query YAML in Markdown/JSONL — JSON/TSV out | Markdown data | — |
-| [matterbase](https://github.com/rhsev/matterbase) | Table view + query builder on those records (TUI) | Markdown data | grubber |
-| [mark-twin](https://github.com/rhsev/mark-twin) | Sync config folders between Macs from Markdown rules | Markdown data | grubber |
-| [fileanchor](https://github.com/rhsev/fileanchor) | macOS file-metadata engine | Identity | — |
-| [fileregister](https://github.com/rhsev/fileregister) | Durable ids + plain-text collections | Identity | fileanchor, grubber |
-| [dy.lan](https://github.com/rhsev/dy.lan) | URL router for the LAN, plugin automation | URLs | — |
-| [mi.lan](https://github.com/rhsev/mi.lan) | Trigger macOS scripts and Shortcuts via URL | URLs | fileregister |
-| [ticker](https://github.com/rhsev/ticker) | LED ticker for the menu bar, CLI + URL handler | URLs | — |
 
