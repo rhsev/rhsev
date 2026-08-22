@@ -18,5 +18,5 @@ A file gets a permanent id, stamped into an xattr that survives rename, move, iC
 
 ### Actionable URLs
 
-**[dy.lan](https://github.com/rhsev/dy.lan)** is a URL router for the local network with plugin-based automation; it runs as a container. **[mi.lan](https://github.com/rhsev/mi.lan)** is the macOS side: a URL arrives, a script or Shortcut runs. Together they are a lightweight local RPC layer. `milan://<aka>` resolves a file by its durable id and opens it, on whatever machine holds it. **[ticker](https://github.com/rhsev/ticker)** is an LED dot-matrix ticker in the menu bar, driven from the command line or by URL. It registers handlers for `milan://` and `ref://`.
+**[dy.lan](https://github.com/rhsev/dy.lan)** is a URL router for the local network with plugin-based automation; it runs as a container. **[mi.lan](https://github.com/rhsev/mi.lan)** is the macOS side: a URL arrives, a script or Shortcut runs. Together they are a lightweight local RPC layer. `ref://<aka>` resolves a file by its durable id and opens it. **[ticker](https://github.com/rhsev/ticker)** is an LED dot-matrix ticker in the menu bar, driven from the command line. It registers handlers for `milan://` and `ref://`.
 
