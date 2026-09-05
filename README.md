@@ -10,7 +10,7 @@ The tools are small and composable: portable engines and CLIs with the macOS-spe
 
 ### Markdown as data
 
-**[grubber](https://github.com/rhsev/grubber)** is the query layer: it reads YAML blocks and frontmatter out of Markdown (and JSONL) and answers field queries, JSON or TSV out. Use your Markdown files like a database from the shell and over any folder. Consumers build on it: **[matterbase](https://github.com/rhsev/matterbase)** (interactive table view + query builder) and **[mark-twin](https://github.com/rhsev/mark-twin)** (Markdown-defined config sync between Macs); the fileregister index is grubber-readable too.
+**[grubber](https://github.com/rhsev/grubber)** is the query layer: it reads YAML blocks and frontmatter out of Markdown (and JSONL) and answers field queries, JSON or TSV out. Use your Markdown files like a database. Consumers build on it: **[matterbase](https://github.com/rhsev/matterbase)** (interactive table view + query builder) and **[mark-twin](https://github.com/rhsev/mark-twin)** (Markdown-defined config sync between Macs); the fileregister index is grubber-readable too.
 
 ### Durable file identity
 
